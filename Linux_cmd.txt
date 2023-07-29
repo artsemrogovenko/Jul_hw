@@ -1,0 +1,46 @@
+db@linux:~/zoo$ cat > Домашние_животные
+собаки 
+кошки
+хомяки
+db@linux:~/zoo$ cat > Вьючные_животные
+лошади
+верблюды
+ослы
+db@linux:~/zoo$ cat Домашние_животные Вьючные_животные > Друзья_человека
+db@linux:~/zoo$ cat Друзья_человека 
+собаки
+кошки
+хомяки
+лошади
+верблюды
+ослы
+db@linux:~/zoo$ 
+
+db@linux:~/zoo$ mkdir newDir ; mv Друзья_человека ./newDir/ 
+db@linux:~/zoo$ ls
+newDir  Вьючные_животные  Домашние_животные
+db@linux:~/zoo$ ls newDir/
+Друзья_человека
+db@linux:~/zoo$ 
+db@linux:~/zoo$ sudo apt install mysql-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Будут установлены следующие дополнительные пакеты:
+
+db@linux:~/zoo$ mkdir Database
+db@linux:~/zoo$ cd Database/
+db@linux:~/zoo/Database$ sudo su
+
+root@linux:/home/db/zoo/Database# wget -c https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+teamviewer_amd64.de 100%[===================>]  84,52M  2,08MB/s    за 41s     
+
+2023-07-25 21:11:58 (2,05 MB/s) - ‘teamviewer_amd64.deb’ сохранён [88630248/88630248]
+
+root@linux:/home/db/zoo/Database# dpkg -i teamviewer_amd64.deb
+Выбор ранее не выбранного пакета teamviewer.
+(Чтение базы данных … на данный момент установлено 180090 файлов и каталогов.)
+Подготовка к распаковке teamviewer_amd64.deb …
+Распаковывается teamviewer (15.44.4) …
+
+root@linux:/home/db/zoo/Database# dpkg -r teamviewer
